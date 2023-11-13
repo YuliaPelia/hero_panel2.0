@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import classNames from "classnames";
 import store from "../../store";
 
-import { filterChanged, fetchFilters, selectAll } from "./filterSlice";
+import { filtersChanged, fetchFilters, selectAll } from "./filterSlice";
 import Spinner from "../spinner/Spinner";
 
 const HeroesFilters = () => {
@@ -42,7 +42,7 @@ const HeroesFilters = () => {
           key={name}
           id={name}
           className={btnClass}
-          onClick={() => dispatch(filterChanged(name))}
+          onClick={() => dispatch(filtersChanged(name))}
         >
           {label}
         </button>
